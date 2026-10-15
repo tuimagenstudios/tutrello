@@ -1,0 +1,11 @@
+{
+  "name": "TUTRELLO",
+  "short_name": "TUTRELLO",
+  "description": "Tableros compartidos de Tuimagen Studios",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#05091a",
+  "theme_color": "#05091a",
+  "lang": "es",
+  "icons": [{ "src": "assets/tuimagen-studios.png", "sizes": "2000x2000", "type": "image/png", "purpose": "any" }]
+}

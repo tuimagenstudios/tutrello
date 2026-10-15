@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05091a">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TUTRELLO">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self' https://*.googleapis.com https://*.firebaseapp.com http://127.0.0.1:9099 http://127.0.0.1:8080 ws://127.0.0.1:8080; frame-src https://*.firebaseapp.com; object-src 'none'; base-uri 'none'">
+<title>TUTRELLO</title>
+<link rel="icon" href="assets/tuimagen-studios.png">
+<link rel="apple-touch-icon" href="assets/tuimagen-studios.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="signed-out">
+<header class="topbar">
+  <button class="brand" id="go-home" title="Ir a tus tableros">
+    <span class="brand-symbol"><img src="assets/tuimagen-studios.png" alt=""></span>
+    <span class="brand-text"><strong>TUTRELLO<span class="dot">.</span></strong><small>TUIMAGEN STUDIOS</small></span>
+  </button>
+  <span class="divider app-only"></span>
+  <button class="ghost app-only" id="nav-boards">Tableros</button>
+  <button class="ghost app-only" id="nav-starred">Destacados</button>
+  <button class="primary app-only" id="create-board-top">Crear</button>
+  <div class="spacer"></div>
+  <div class="search-wrap app-only">
+    <input id="search" type="search" placeholder="Buscar tarjetas…" autocomplete="off" aria-label="Buscar tarjetas">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <button class="ghost icon app-only" id="menu-data" title="Datos y copia de seguridad">⇅</button>
+  <span class="save-status app-only" id="save-status"><i></i>CONECTANDO</span>
+  <button class="avatar user-btn" id="user-btn" hidden></button>
+</header>
+
+<main id="view"></main>
+
+<div id="modal-root"></div>
+<div id="popover-root"></div>
+<input type="file" id="import-file" accept="application/json,.json" hidden>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script src="firebase-config.js"></script>
+<script src="cloud.bundle.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
